@@ -1,3 +1,19 @@
+.navbar-app-name{
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  color: #000000;
+}
+
+.navbar-username{
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  color: #898989;
+  ;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
