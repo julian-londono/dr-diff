@@ -47,6 +47,50 @@
   
 }
 
+.communication-header{
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: #000000;
+}
+
+.communication-comment-user{
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000000;
+}
+
+.communication-comment-text{
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}
+
+.communication-textarea{
+  background: #EFF0F7;
+  border-radius: 16px;
+  height: 130px;
+  outline: none;
+  border: none;
+}
+
+.communication-button-approve{
+  background: #609992;
+  border-radius: 10px;
+  height: 50px;
+  border-color: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffffff;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -66,7 +110,4 @@ html, body, #root {
   height: 100%;
   min-height: 100%;
   overflow-y: hidden;
-}
-
-.min-100 {
 }

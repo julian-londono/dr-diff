@@ -31,12 +31,20 @@ const db = firebaseApp.firestore();
 // const [desImgSrc, setDesImgSrc] = useState("");
 // const [approved, setApproved] = useState("");
 
+export interface Comment {
+  id?: number,
+  time_posted?: string,
+  user: string,
+  body: string
+}
+
 interface Props {
 
 }
 
 interface State {
-  title: string
+  title: string,
+  comments: Comment[]
 }
 
 
@@ -46,7 +54,15 @@ export default class App extends React.Component<Props, State> {
   constructor(props: Readonly<Props>) {
     super(props);
     this.state = {
-      title: "Default Title"
+      title: "Default Title",
+      comments: [
+        {
+          user: "Engineer 1", body: "Is there a reason we are trying to do in this screen?!"
+        },
+        {
+          user: "Designer 1", body: "We are trying to make sure the user can see all the info on one screen"
+        }
+      ]
     };
   }
 
@@ -58,11 +74,11 @@ export default class App extends React.Component<Props, State> {
         </div>
       </div>
       <div className="row d-flex h-100">
-        <div className="col-md-9">
+        <div className="col-md-9 pr-1">
           <ActionBar screenTitle={this.state.title} />
         </div>
-        <div className="col-md-3">
-          <Communication />
+        <div className="col-md-3 px-0">
+          <Communication comments={this.state.comments} />
         </div>
       </div>
     </div>
