@@ -2,13 +2,17 @@ import React from 'react';
 import './App.css';
 import upload from './assets/upload.svg'
 
-export default function ActionBar() {
-    return (
-        <div className="container-fluid px-0 py-4 bg-light">
+interface Props {
+    screenTitle: string;
+}
+
+export default class ActionBar extends React.Component<Props> {
+    render() {
+        return <div className="container-fluid px-0 py-4 bg-light" >
             <div className="row">
                 <div className="col-md-3 pl-5">
                     <p className="actionbar-role my-0">Designer</p>
-                    <p className="actionbar-screen-title my-0">Home Screen</p>
+                    <p className="actionbar-screen-title my-0">{this.props.screenTitle}</p>
                     <p className="actionbar-updated my-0">Last updated: </p>
                 </div>
                 <div className="col-md-3">
@@ -26,5 +30,5 @@ export default function ActionBar() {
                 </div>
             </div>
         </div>
-    );
+    };
 }
