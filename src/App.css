@@ -75,12 +75,13 @@
   color: #000000;
 }
 
-.communication-textarea{
+.communication-input{
   background: #EFF0F7;
   border-radius: 16px;
   height: 130px;
   outline: none;
   border: none;
+  padding-bottom: 25% !important;
 }
 
 .communication-button-approve{
