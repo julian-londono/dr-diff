@@ -3,7 +3,10 @@ import './App.css';
 import Navbar from './Navbar'
 import ActionBar from './ActionBar'
 import Communication from './Communication'
+import Comparison from './Comparison'
 import './App.css';
+import design_example from './assets/design_example.png'
+import dev_example from './assets/dev_example.png'
 import firebase from "firebase";
 
 // Firebase App (the core Firebase SDK) is always required and
@@ -43,8 +46,11 @@ interface Props {
 }
 
 interface State {
-  title: string,
-  comments: Comment[]
+  screenTitleDesign: string,
+  screenTitleDev: string,
+  comments: Comment[],
+  design_src: string,
+  dev_src: string
 }
 
 
@@ -54,7 +60,8 @@ export default class App extends React.Component<Props, State> {
   constructor(props: Readonly<Props>) {
     super(props);
     this.state = {
-      title: "Default Title",
+      screenTitleDesign: "Default Title",
+      screenTitleDev: "Default Title",
       comments: [
         {
           user: "Engineer 1", body: "Is there a reason we are trying to do in this screen?!"
@@ -62,7 +69,9 @@ export default class App extends React.Component<Props, State> {
         {
           user: "Designer 1", body: "We are trying to make sure the user can see all the info on one screen"
         }
-      ]
+      ],
+      design_src: design_example,
+      dev_src: dev_example
     };
   }
 
@@ -73,11 +82,17 @@ export default class App extends React.Component<Props, State> {
           <Navbar />
         </div>
       </div>
-      <div className="row d-flex h-100">
-        <div className="col-md-9 pr-1">
-          <ActionBar screenTitle={this.state.title} />
+      <div className="row h-100">
+        <div className="col-md-9 d-flex flex-column">
+          <div className="row pr-1 div-shadow">
+            <ActionBar screenTitleDesign={this.state.screenTitleDesign} screenTitleDev={this.state.screenTitleDev} />
+          </div>
+          <div className="row pr-1 flex-grow-1">
+            <Comparison design_src={this.state.design_src} dev_src={this.state.dev_src} />
+
+          </div>
         </div>
-        <div className="col-md-3 px-0">
+        <div className="col-md-3 px-0 div-shadow">
           <Communication comments={this.state.comments} />
         </div>
       </div>

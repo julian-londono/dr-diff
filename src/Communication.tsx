@@ -22,13 +22,13 @@ export default class ActionBar extends React.Component<Props> {
     }
 
     render() {
-        return <div className=" bg-light h-100 px-5" >
+        return <div className=" bg-white h-100 px-5" >
             <div className="row ">
                 <div className="col-md-12">
                     <p className="communication-header text-center py-4">Comments</p>
                 </div>
             </div>
-            <div className="row h-50 d-block">
+            <div className="row communication-chat d-block">
                 {this.getComments()}
             </div>
             <div className="row ">

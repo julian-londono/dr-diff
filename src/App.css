@@ -55,6 +55,10 @@
   color: #000000;
 }
 
+.communication-chat{
+  height: 35%;
+}
+
 .communication-comment-user{
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-style: normal;
@@ -91,6 +95,27 @@
   color: #ffffff;
 }
 
+.div-shadow{
+  box-shadow: -4px 0px 4px #F7F7F7;
+}
+
+.comparison-border::after{
+  content: '';
+  height: 27%;
+  width: 92%;
+  border-right: 1px solid #C4C4C4;
+  position: absolute;
+  top: 12%;
+}
+
+.comparison-containers{
+  padding: 5%;
+}
+
+.comparison-img{
+  object-fit: contain;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -110,4 +135,6 @@ html, body, #root {
   height: 100%;
   min-height: 100%;
   overflow-y: hidden;
+  background-color: #F7F7F7
+  ;
 }
